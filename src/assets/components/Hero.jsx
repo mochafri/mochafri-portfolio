@@ -77,12 +77,12 @@ export default function Hero() {
                     {/* Centered Profile Image Wrapper with Vignette and z-10 (layered in front of the text) */}
                     <div 
                         ref={imageRef}
-                        className="absolute top-[70px] sm:top-[90px] md:top-[110px] lg:top-[120px] left-1/2 -translate-x-1/2 w-[320px] sm:w-[420px] md:w-[500px] lg:w-[580px] h-[360px] sm:h-[460px] md:h-[540px] lg:h-[620px] overflow-hidden group cursor-pointer z-10"
+                        className="absolute top-[70px] sm:top-[90px] md:top-[110px] lg:top-[120px] left-1/2 -translate-x-1/2 w-[320px] sm:w-[420px] md:w-[500px] lg:w-[580px] h-[45vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] overflow-hidden group cursor-pointer z-10"
                     >
                         <img
                             src={heroImage}
                             alt="profile"
-                            className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+                            className="w-full h-full object-contain object-bottom filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
                         />
                         {/* Vignette bottom blur/fade mask */}
                         <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-background via-background/70 to-transparent pointer-events-none z-20"></div>

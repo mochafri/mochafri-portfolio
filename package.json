@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mochafri.github.io",
+  "homepage": "https://mochafri.github.io/portofolio-mochafri",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
