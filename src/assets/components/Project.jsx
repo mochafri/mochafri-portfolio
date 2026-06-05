@@ -1,27 +1,16 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import voluntrack from '../image/voluntrack.png';
 import outbound from '../image/outbound.png';
 import stratisglobal from '../image/stratisglobal.png';
 import d3rpla from '../image/d3rpla.png';
-import voluntrackVideo from '../video/voluntrack.mp4';
-import comingSoonVideo from '../video/comingSoon.mp4';
-import outboundVideo from '../video/outbound-web.mp4';
-import stratisglobalVideo from '../video/stratisglobal.mp4';
-import d3rplavideo from '../video/d3rplavideo.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Project() {
 
-    const sectionsRef = useRef([]); // Declare sectionsRef here
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-    const [hoveredVideo, setHoveredVideo] = useState(null);
-
-    const handleMouseMove = (e) => {
-        setMousePos({ x: e.clientX, y: e.clientY });
-    };
+    const sectionsRef = useRef([]);
 
     useEffect(() => {
         sectionsRef.current.forEach((section) => {
@@ -59,9 +48,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(voluntrackVideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={voluntrack} alt="voluntrack" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
@@ -82,9 +68,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(outboundVideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={outbound} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
@@ -105,9 +88,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(stratisglobalVideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={stratisglobal} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
@@ -128,9 +108,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(d3rplavideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={d3rpla} alt="d3rpla" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
@@ -150,9 +127,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col items-center justify-center p-6 border border-dashed border-white/10 hover:border-secondary/30 hover:bg-white/[0.01] transition-all duration-500 cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(comingSoonVideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary/10 transition-all duration-300 transform group-hover:rotate-90">
                                     <span className="text-xl font-light text-white/30 group-hover:text-secondary transition-colors duration-300">+</span>
@@ -163,9 +137,6 @@ export default function Project() {
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col items-center justify-center p-6 border border-dashed border-white/10 hover:border-secondary/30 hover:bg-white/[0.01] transition-all duration-500 cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
-                                onMouseEnter={() => setHoveredVideo(comingSoonVideo)}
-                                onMouseLeave={() => setHoveredVideo(null)}
-                                onMouseMove={handleMouseMove}
                             >
                                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary/10 transition-all duration-300 transform group-hover:rotate-90">
                                     <span className="text-xl font-light text-white/30 group-hover:text-secondary transition-colors duration-300">+</span>
@@ -178,26 +149,7 @@ export default function Project() {
                 </div>
             </div>
 
-            {/* Floating Video Popup */}
-            {hoveredVideo && (
-                <div 
-                    className="fixed pointer-events-none z-[9999] overflow-hidden rounded-2xl border border-white/20 bg-[#22242E] shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-[320px] sm:w-[400px] h-[195px] sm:h-[240px] transition-[left,top] duration-200 ease-out"
-                    style={{
-                        left: `${mousePos.x + 20}px`,
-                        top: `${mousePos.y + 20}px`,
-                    }}
-                >
-                    <video 
-                        key={hoveredVideo}
-                        src={hoveredVideo} 
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline 
-                        className="w-full h-full object-cover" 
-                    />
-                </div>
-            )}
+
         </section>
     );
 }
