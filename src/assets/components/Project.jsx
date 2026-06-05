@@ -2,8 +2,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import voluntrack from '../image/voluntrack.png';
+import outbound from '../image/outbound.png';
+import stratisglobal from '../image/stratisglobal.png';
+import d3rpla from '../image/d3rpla.png';
 import voluntrackVideo from '../video/voluntrack.mp4';
 import comingSoonVideo from '../video/comingSoon.mp4';
+import outboundVideo from '../video/outbound-web.mp4';
+import stratisglobalVideo from '../video/stratisglobal.mp4';
+import d3rplavideo from '../video/d3rplavideo.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,9 +73,77 @@ export default function Project() {
                                         A modern web platform designed to track volunteer projects, manage participant registrations, and analyze overall community impact. Built with highly interactive dashboard layouts.
                                     </p>
                                     <div className="mt-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">React</span>
+                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">Laravel</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">Tailwind CSS</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div 
+                                className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
+                                ref={(el) => sectionsRef.current.push(el)}
+                                onMouseEnter={() => setHoveredVideo(outboundVideo)}
+                                onMouseLeave={() => setHoveredVideo(null)}
+                                onMouseMove={handleMouseMove}
+                            >
+                                <div className="absolute inset-0 overflow-hidden">
+                                    <img src={outbound} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
+                                </div>
+                                <div className="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+                                    <h3 className="font-sharpSemiBold25 text-2xl text-white group-hover:text-secondary transition-colors duration-300">Outbound</h3>
+                                    <p className="font-avenir55Roman text-xs text-white/70 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                        A modern web platform designed to track volunteer projects, manage participant registrations, and analyze overall community impact. Built with highly interactive dashboard layouts.
+                                    </p>
+                                    <div className="mt-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">Typescript</span>
                                         <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">Tailwind CSS</span>
                                         <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">GSAP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div 
+                                className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
+                                ref={(el) => sectionsRef.current.push(el)}
+                                onMouseEnter={() => setHoveredVideo(stratisglobalVideo)}
+                                onMouseLeave={() => setHoveredVideo(null)}
+                                onMouseMove={handleMouseMove}
+                            >
+                                <div className="absolute inset-0 overflow-hidden">
+                                    <img src={stratisglobal} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
+                                </div>
+                                <div className="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+                                    <h3 className="font-sharpSemiBold25 text-2xl text-white group-hover:text-secondary transition-colors duration-300">StratisGlobal</h3>
+                                    <p className="font-avenir55Roman text-xs text-white/70 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                        A modern web platform designed to track volunteer projects, manage participant registrations, and analyze overall community impact. Built with highly interactive dashboard layouts.
+                                    </p>
+                                    <div className="mt-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">Typescript</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">Tailwind CSS</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">GSAP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div 
+                                className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
+                                ref={(el) => sectionsRef.current.push(el)}
+                                onMouseEnter={() => setHoveredVideo(d3rplavideo)}
+                                onMouseLeave={() => setHoveredVideo(null)}
+                                onMouseMove={handleMouseMove}
+                            >
+                                <div className="absolute inset-0 overflow-hidden">
+                                    <img src={d3rpla} alt="d3rpla" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
+                                </div>
+                                <div className="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+                                    <h3 className="font-sharpSemiBold25 text-2xl text-white group-hover:text-secondary transition-colors duration-300">D3 RPLA</h3>
+                                    <p className="font-avenir55Roman text-xs text-white/70 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                        A modern web platform designed to track volunteer projects, manage participant registrations, and analyze overall community impact. Built with highly interactive dashboard layouts.
+                                    </p>
+                                    <div className="mt-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">Wordpress</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">Gutenberg</span>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +181,7 @@ export default function Project() {
             {/* Floating Video Popup */}
             {hoveredVideo && (
                 <div 
-                    className="fixed pointer-events-none z-[9999] overflow-hidden rounded-2xl border border-white/20 bg-[#22242E] shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-[240px] sm:w-[280px] h-[145px] sm:h-[170px] transition-[left,top] duration-200 ease-out"
+                    className="fixed pointer-events-none z-[9999] overflow-hidden rounded-2xl border border-white/20 bg-[#22242E] shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-[320px] sm:w-[400px] h-[195px] sm:h-[240px] transition-[left,top] duration-200 ease-out"
                     style={{
                         left: `${mousePos.x + 20}px`,
                         top: `${mousePos.y + 20}px`,
