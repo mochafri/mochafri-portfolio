@@ -5,6 +5,7 @@ import voluntrack from '../image/voluntrack.png';
 import outbound from '../image/outbound.png';
 import stratisglobal from '../image/stratisglobal.png';
 import d3rpla from '../image/d3rpla.png';
+import pdam from '../image/pdam.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +70,17 @@ export default function Project() {
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
                             >
+                                {/* External Link Icon */}
+                                <a 
+                                    href="https://outbound-web-pearl.vercel.app/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute top-5 right-5 z-20 w-10 h-10 bg-black/40 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-secondary hover:border-secondary hover:scale-110 transform translate-y-2 group-hover:translate-y-0 shadow-lg"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 7h-7m7 0v7m0-7L7 17" />
+                                    </svg>
+                                </a>
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={outbound} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
@@ -89,6 +101,17 @@ export default function Project() {
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
                             >
+                                {/* External Link Icon */}
+                                <a 
+                                    href="https://stratisglobal.vercel.app/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute top-5 right-5 z-20 w-10 h-10 bg-black/40 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-secondary hover:border-secondary hover:scale-110 transform translate-y-2 group-hover:translate-y-0 shadow-lg"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 7h-7m7 0v7m0-7L7 17" />
+                                    </svg>
+                                </a>
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={stratisglobal} alt="outbound" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
@@ -109,6 +132,17 @@ export default function Project() {
                                 className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
                             >
+                                {/* External Link Icon */}
+                                <a 
+                                    href="https://dif.telkomuniversity.ac.id/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute top-5 right-5 z-20 w-10 h-10 bg-black/40 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-secondary hover:border-secondary hover:scale-110 transform translate-y-2 group-hover:translate-y-0 shadow-lg"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 7h-7m7 0v7m0-7L7 17" />
+                                    </svg>
+                                </a>
                                 <div className="absolute inset-0 overflow-hidden">
                                     <img src={d3rpla} alt="d3rpla" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
@@ -125,14 +159,34 @@ export default function Project() {
                                 </div>
                             </div>
                             <div 
-                                className="project-card group relative overflow-hidden flex flex-col items-center justify-center p-6 border border-dashed border-white/10 hover:border-secondary/30 hover:bg-white/[0.01] transition-all duration-500 cursor-pointer" 
+                                className="project-card group relative overflow-hidden flex flex-col justify-between cursor-pointer" 
                                 ref={(el) => sectionsRef.current.push(el)}
                             >
-                                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary/10 transition-all duration-300 transform group-hover:rotate-90">
-                                    <span className="text-xl font-light text-white/30 group-hover:text-secondary transition-colors duration-300">+</span>
+                                {/* External Link Icon */}
+                                <a 
+                                    href="https://pdam-digital.vercel.app/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute top-5 right-5 z-20 w-10 h-10 bg-black/40 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-secondary hover:border-secondary hover:scale-110 transform translate-y-2 group-hover:translate-y-0 shadow-lg"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 7h-7m7 0v7m0-7L7 17" />
+                                    </svg>
+                                </a>
+                                <div className="absolute inset-0 overflow-hidden">
+                                    <img src={pdam} alt="pdam" className="w-full h-full object-cover object-left transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-300 opacity-80 group-hover:opacity-90"></div>
                                 </div>
-                                <h3 className="font-avenir85Heavy text-base text-white/40 mt-4 group-hover:text-white/80 transition-colors duration-300">New Project</h3>
-                                <p className="font-avenir55Roman text-xs text-white/25 mt-1">Coming Soon</p>
+                                <div className="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+                                    <h3 className="font-sharpSemiBold25 text-2xl text-white group-hover:text-secondary transition-colors duration-300">PDAM Digital</h3>
+                                    <p className="font-avenir55Roman text-xs text-white/70 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                        A modern web platform designed to track volunteer projects, manage participant registrations, and analyze overall community impact. Built with highly interactive dashboard layouts.
+                                    </p>
+                                    <div className="mt-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                        <span className="text-[10px] bg-secondary/20 border border-secondary/30 text-secondary px-2.5 py-0.5 rounded-full font-avenirMedium">Wordpress</span>
+                                        <span className="text-[10px] bg-white/10 border border-white/20 text-white/80 px-2.5 py-0.5 rounded-full font-avenirMedium">Gutenberg</span>
+                                    </div>
+                                </div>
                             </div>
                             <div 
                                 className="project-card group relative overflow-hidden flex flex-col items-center justify-center p-6 border border-dashed border-white/10 hover:border-secondary/30 hover:bg-white/[0.01] transition-all duration-500 cursor-pointer" 
