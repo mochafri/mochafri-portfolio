@@ -1,7 +1,3 @@
-import Instagram from '../icon/Instagram.svg'
-import gmail from '../icon/gmail-2026.svg';
-import whatsapp from '../icon/whatsapp.svg';
-import LinkedIn from '../icon/LinkedIn.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -65,14 +61,13 @@ export default function Contact() {
                          <h4 className="text-white/50 text-xs font-avenir85Heavy mb-6 uppercase tracking-widest">Social Media</h4>
                          <div className="flex flex-col w-full">
                              {[
-                                 { icon: Instagram, title: 'Instagram', value: datas[0].instagram, link: 'https://www.instagram.com/moch.afri/' },
-                                 { icon: LinkedIn, title: 'LinkedIn', value: datas[0].linkedIn, link: 'https://www.linkedin.com/in/moch-afrizal-873b5a28b/' },
-                                 { icon: whatsapp, title: 'Whatsapp', value: datas[0].whatsapp, link: 'https://wa.me/6282126030612' },
-                                 { icon: gmail, title: 'Gmail', value: datas[0].gmail, link: 'mailto:afrizalmuhammad656@gmail.com' },
-                             ].map(({ icon, title, value, link }, i) => (
-                                 <a href={link} target="_blank" rel="noreferrer" key={i} className={`text-white hover:text-secondary text-2xl sm:text-3xl font-avenir85Heavy transition-colors py-6 border-t border-white/10 flex justify-between items-center group ${i === 3 ? 'border-b' : ''}`}>
+                                 { title: 'Instagram', value: datas[0].instagram, link: 'https://www.instagram.com/moch.afri/' },
+                                 { title: 'LinkedIn', value: datas[0].linkedIn, link: 'https://www.linkedin.com/in/moch-afrizal-873b5a28b/' },
+                                 { title: 'Whatsapp', value: datas[0].whatsapp, link: 'https://wa.me/6282126030612' },
+                                 { title: 'Gmail', value: datas[0].gmail, link: 'mailto:afrizalmuhammad656@gmail.com' },
+                             ].map(({ title, value, link }, i) => (
+                                 <a href={link} target="_blank" rel="noreferrer" key={i} className={`text-white hover:text-[#00F0FF] text-2xl sm:text-3xl font-avenir85Heavy transition-colors py-6 border-t border-white/10 flex justify-between items-center group ${i === 3 ? 'border-b' : ''}`}>
                                      <div className="flex items-center gap-6">
-                                         <img src={icon} alt={title.toLowerCase()} className="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity" />
                                          <span className="truncate">{value}</span>
                                      </div>
                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>

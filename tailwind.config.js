@@ -16,7 +16,7 @@ export default {
       },
       colors: {
         background: "#22242E",
-        secondary: "#DD7E71"
+        secondary: "#00F0FF"
       },
       boxShadow: {
         'custom-dark': '10px 10px 20px 4px rgba(0, 0, 0, 0.2)'

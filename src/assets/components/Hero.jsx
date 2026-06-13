@@ -12,6 +12,11 @@ export default function Hero() {
     const portfolioRef = useRef(null);
     const websiteRef = useRef(null);
     const imageRef = useRef(null);
+    
+    // Refs for floating SVGs
+    const shape1Ref = useRef(null);
+    const shape2Ref = useRef(null);
+    const shape3Ref = useRef(null);
 
     useEffect(() => {
         const fullText = 'Hello, I’m <span id="nama">Muhammad Afrizal</span>. Welcome to my';
@@ -59,6 +64,20 @@ export default function Hero() {
             delay: 3.7,  // Delay gambar agar muncul setelah teks
             ease: 'power2.inOut',
         });
+
+        // Parallax effect for SVGs
+        const handleMouseMove = (e) => {
+            const { innerWidth, innerHeight } = window;
+            const x = (e.clientX / innerWidth - 0.5) * 2; // -1 to 1
+            const y = (e.clientY / innerHeight - 0.5) * 2; // -1 to 1
+
+            if (shape1Ref.current) gsap.to(shape1Ref.current, { x: x * 40, y: y * 40, rotation: x * 45, duration: 1, ease: 'power2.out' });
+            if (shape2Ref.current) gsap.to(shape2Ref.current, { x: x * -60, y: y * -60, rotation: x * -90, duration: 1, ease: 'power2.out' });
+            if (shape3Ref.current) gsap.to(shape3Ref.current, { x: x * 80, y: y * -40, rotation: x * 120, duration: 1, ease: 'power2.out' });
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
     return (
@@ -72,6 +91,21 @@ export default function Hero() {
                             <h1 ref={portfolioRef} className="font-sharpSemiBold25 text-white select-none">Portfolio</h1>
                             <h1 ref={websiteRef} className="font-sharpSemiBold25 text-white select-none">Website</h1>
                         </div>
+                    </div>
+                    
+                    {/* Floating Interactive SVGs */}
+                    <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden hidden md:block">
+                        <svg ref={shape1Ref} className="absolute top-[20%] left-[15%] w-12 h-12 text-[#00F0FF] opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        
+                        <svg ref={shape2Ref} className="absolute top-[60%] right-[15%] w-16 h-16 text-secondary opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+
+                        <svg ref={shape3Ref} className="absolute bottom-[10%] left-[30%] w-10 h-10 text-[#0055FF] opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        </svg>
                     </div>
                     
                     {/* Centered Profile Image Wrapper with Vignette and z-10 (layered in front of the text) */}

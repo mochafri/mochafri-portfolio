@@ -103,10 +103,10 @@ const Navbar = () => {
                                 <li key={item.id}>
                                     <a 
                                         href={item.id} 
-                                        className={`relative py-1.5 font-avenirMedium text-sm transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-secondary after:transition-transform after:duration-300 after:origin-left block md:inline ${
+                                        className={`relative py-1.5 font-avenirMedium text-sm transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#00F0FF] after:transition-transform after:duration-300 after:origin-left block md:inline ${
                                             isActive 
-                                                ? "text-secondary after:scale-x-100" 
-                                                : "text-white/70 hover:text-secondary after:scale-x-0 hover:after:scale-x-100"
+                                                ? "text-[#00F0FF] after:scale-x-100" 
+                                                : "text-white/70 hover:text-[#00F0FF] after:scale-x-0 hover:after:scale-x-100"
                                         }`}
                                         onClick={() => {
                                             setActiveSection(item.id);
